@@ -7,9 +7,9 @@ services:
     ports:
       - 40001:3000
     environment:
-      - YAPI_ADMIN_ACCOUNT=admin@docker.yapi
-      - YAPI_ADMIN_PASSWORD=adm1n
-      - YAPI_CLOSE_REGISTER=true
+      - YAPI_ADMIN_ACCOUNT=admin@ilslx.com
+      - YAPI_ADMIN_PASSWORD=ilslx.com
+      - YAPI_CLOSE_REGISTER=false
       - YAPI_DB_SERVERNAME=yapi-mongo
       - YAPI_DB_PORT=27017
       - YAPI_DB_DATABASE=yapi
@@ -26,6 +26,7 @@ services:
     container_name: yapi-mongo
     volumes:
       - ./data/db:/data/db
+      - ./app:/app
     expose:
       - 27017
     restart: unless-stopped
