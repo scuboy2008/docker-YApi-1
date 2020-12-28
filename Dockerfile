@@ -43,6 +43,7 @@ RUN node /yapi/scripts/clean.js $(pwd)
 # 删除脚本
 RUN rm -rf /yapi/scripts
 
+COPY open.js /yapi/vendors/server/controllers/
 
 ######## 镜像 ########
 FROM node:12.16.3-alpine3.11
